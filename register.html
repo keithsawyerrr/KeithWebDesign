@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="style.css">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- JQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+
+
+ <script>
+    $(document).ready(function(){
+        $("form").validate({
+        rules: {
+            email:{
+                required:true,
+                email: true
+            },
+            name:{
+                required:true,
+                text: true
+            },
+            surname:{
+                required:true,
+                text: true
+            },
+            number:{
+                required: true,
+                number: true
+            }
+        },
+        messages:{
+            email: "Please enter a valid email",
+            name: "Please enter name",
+            surname: "Please enter surname",
+            number: "Please enter a valid number"
+            
+        },
+        submitHandler: function(form) {
+        form.submit();
+        }   
+        });
+    })
+
+ </script>  
+
+    <title>jQuery validation</title>
+</head>
+    <h1>Kindly register by entering your details below.</h1>    
+    <div class="register">    
+    <form id="register" method="get" action="register.php">    
+        <label><b>Name     
+        </b>    
+        </label>    
+        <input type="Name" name="Name" id="Name" placeholder="First Name">    
+        <br><br>
+        <label><b>Surname     
+        </b>    
+        </label>    
+        <input type="Surname" name="Surname" id="Surname" placeholder="Last Name">    
+        <br><br>
+        <label><b>email     
+        </b>    
+        </label>    
+        <input type="email" name="ContactEmail" id="email" placeholder="E-mail">    
+        <br><br>
+        <label><b>Mobile Number     
+        </b>    
+        </label>    
+        <input type="MobileNo" name="MobileNo" id="MobileNo" placeholder="Enter your phone number">    
+        <br><br>
+        <label><b>Password     
+        </b>    
+        </label>    
+        <input type="pass" name="pass" id="pass" placeholder="Password..">    
+        <br><br>
+        <h3>Once you've put in your details, click 'sign up' and your account would be created</h3>
+        <input type="button" onclick="window.location.href='index.html';" value="Sign up!" /> 
+
+</head>
+<body>
+    
+</body>
+</html>

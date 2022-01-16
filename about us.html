@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>    
+    <title>KS Gaming</title>
+</head>
+<body>
+    <ul>
+      <li><a class="active" href="index.html">Home</a></li>
+      <li><a href="about us.html">About us</a></li>
+      <li><a href="games.html">Games</a></li>
+      <li><a href="contact us.html">Contact us</a></li>
+    </ul>    
+    </body>
+    <head>
+        <style>
+        h2 {text-align: center;}
+        p {text-align: center;}
+        </style>
+        </head>
+    <link rel="stylesheet" href="style.css">
+    <h1>About Us</h1>
+    <h2 style="color:rgb(226, 224, 86);">What do we do?</h2>
+    <p>We offer some of the best casino games available to play right now. It is very simple to play our games, and very enjoyable too, with low risk!</p>
+    <h2 style="color:rgb(226, 224, 86);">Our goals?</h2>
+    <p>Our goal is to be the first option for you when it comes to casino games. Since we only offer 9 casino games now, we are looking to add more in the near future.</p>
+    <h2 style="color:rgb(226, 224, 86);">Our team</h2>
+    <p>We have an amazing, outgoing team which is always ready to help you. We have chat support agents which are highly experienced in the iGaming industry.</p>
+    <div class="slideshow-container">
+      
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 3</div>
+          <img src="CasinoImagesFolder/AboutUs0.jpg" style="width:100%">
+          <div class="text">1</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 3</div>
+          <img src="CasinoImagesFolder/AboutUs2.jpg" style="width:100%">
+          <div class="text">2</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 3</div>
+          <img src="CasinoImagesFolder/AboutUs3.jpg" style="width:100%">
+          <div class="text">Game 3</div>
+        </div>
+  
+        
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        
+        </div>
+        <br>
+        
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span> 
+          <span class="dot" onclick="currentSlide(2)"></span> 
+          <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+        
+        <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+        }
+        </script>
+</body>
+</html>
